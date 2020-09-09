@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\yuval\source\repos\WPF_RabbitMQ\PersonSender\PersonSender\obj\Debug\
+C:\Users\yuval\source\repos\WPF_RabbitMQ\WPF_MVVM_RabbitMQ\PersonSender\PersonSender\obj\Debug\
 PersonSender
 none
 false
 DEBUG;TRACE
-C:\Users\yuval\source\repos\WPF_RabbitMQ\PersonSender\PersonSender\App.xaml
+C:\Users\yuval\source\repos\WPF_RabbitMQ\WPF_MVVM_RabbitMQ\PersonSender\PersonSender\App.xaml
 11151548125
 
-11566108662
-22694588802
+121472976788
+22402076057
 MainWindow.xaml;
 
 True

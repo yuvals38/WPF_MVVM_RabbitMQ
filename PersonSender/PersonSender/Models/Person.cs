@@ -35,6 +35,18 @@ namespace PersonSender.Models
             }
         }
 
+        private string gender;
+
+        public string Gender
+        {
+            get { return gender; }
+            set { 
+                gender = value;
+                OnPropertyChanged("Gender");
+            }
+        }
+
+
         private string fullname;
 
         public string Fullname

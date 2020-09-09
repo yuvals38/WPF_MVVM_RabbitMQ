@@ -82,6 +82,7 @@
     </ApplicationDefinition>
     <Compile Include="Controller\Services\MsgService.cs" />
     <Compile Include="ViewModels\Commands\ParameterCommand.cs" />
+    <Compile Include="ViewModels\Converters\BackgroundConverter.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

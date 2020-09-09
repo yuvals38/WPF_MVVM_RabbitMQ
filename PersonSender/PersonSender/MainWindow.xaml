@@ -1,4 +1,5 @@
 ﻿<Window x:Class="PersonSender.MainWindow"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,16 +7,23 @@
         xmlns:local="clr-namespace:PersonSender"
         xmlns:m="clr-namespace:PersonSender.Models"
         xmlns:vm="clr-namespace:PersonSender.ViewModels"
+        xmlns:converters="clr-namespace:PersonSender.ViewModels.Converters"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
         <m:Person x:Key="person"/>
         <vm:ViewModelBase x:Key="viewModel"/>
+        <converters:BackgroundConverter x:Key="converter"/>
     </Window.Resources>
-    <Grid DataContext="{Binding Source={StaticResource person}}">
+    <Grid DataContext="{Binding Source={StaticResource person}}" Background="{Binding Gender,
+        Converter={StaticResource converter}}">
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="400">
             <TextBox Text="{Binding Name,Mode=TwoWay}"/>
             <TextBox Text="{Binding Lastname,Mode=TwoWay}"/>
+            <ComboBox SelectedValue="{Binding Gender,Mode=TwoWay}">
+                <System:String>Male</System:String>
+                <System:String>Female</System:String>
+            </ComboBox>
             <TextBlock Text="{Binding Fullname,Mode=OneWay}" Foreground="black" FontSize="20"/>
           
             <Button Content="Send Person" Command="{Binding ParameterCommand, Mode=OneWay, 
